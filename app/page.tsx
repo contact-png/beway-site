@@ -223,6 +223,23 @@ export default function HomePage() {
           <Link href="/contact" className="btn btn-primary">{t('cta.start')} →</Link>
         </div>
       </section>
+
+    {/* Bouton WhatsApp flottant (mobile uniquement) */}
+<Link
+  href="https://wa.me/33643678864" // remplace par ton numéro au format international sans +
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-4 right-4 z-50 sm:hidden bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:bg-[#1ebc59] transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M20.52 3.48A11.77 11.77 0 0012.01.5a11.5 11.5 0 00-10.5 16.67L.5 23.5l6.49-1.89A11.5 11.5 0 0012 23.5a11.51 11.51 0 008.16-19.99zm-8.5 17.5a9.6 9.6 0 01-4.9-1.34l-.35-.2-3.85 1.12 1.15-3.74-.24-.39a9.54 9.54 0 1117.01-5.53 9.58 9.58 0 01-9.82 10.08zM17 14.35c-.29-.14-1.71-.84-1.97-.94s-.46-.14-.65.14-.75.94-.92 1.13-.34.21-.63.07a7.86 7.86 0 01-2.31-1.43 8.58 8.58 0 01-1.6-2.02c-.17-.29 0-.45.13-.6s.29-.34.43-.51a2.06 2.06 0 00.29-.48.54.54 0 00-.03-.51c-.07-.14-.65-1.56-.89-2.14s-.46-.49-.65-.5h-.55a1.07 1.07 0 00-.78.36 3.27 3.27 0 00-1 2.44 5.69 5.69 0 001.2 2.71 13 13 0 005.03 4.63 11.7 11.7 0 001.39.52 3.31 3.31 0 001.52.1 2.55 2.55 0 001.67-1.19 2.12 2.12 0 00.15-1.2c-.06-.1-.24-.16-.53-.3z" />
+  </svg>
+</Link>
     </main>
   );
 }
