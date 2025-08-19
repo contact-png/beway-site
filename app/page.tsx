@@ -3,29 +3,28 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, Variants, Transition } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useI18n } from './i18n';
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1], // easing premium
-    } as Transition,
-  }),
-};
 
 export default function HomePage() {
   const { t } = useI18n();
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
+    }),
+  };
+
   return (
     <main className="relative pt-18 text-[#0E1B2C]">
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#00B4FF] via-[#0A8DFF] to-[#0047AB] text-white px-4 overflow-hidden" id="home">
+      <section
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#00B4FF] via-[#0A8DFF] to-[#0047AB] text-white px-4 overflow-hidden"
+        id="home"
+      >
         {/* IMAGE GAUCHE */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -68,12 +67,12 @@ export default function HomePage() {
 
         {/* TEXTE HERO */}
         <motion.div
-          custom={0}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="relative z-10 wrap max-w-5xl text-center space-y-8"
-        >
+  custom={0}
+  initial="hidden"
+  animate="visible"
+  variants={fadeUp}
+  className="..."
+>
           <p className="tracking-[0.25em] text-sm font-semibold text-white/70 uppercase">
             {t('home.hero.kicker')}
           </p>
@@ -137,7 +136,6 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
             >
               <div className="relative w-full h-40 mb-4">
                 <Image
@@ -176,7 +174,6 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
             >
               <h3 className="text-lg font-semibold mb-1">{t(`home.how.${s}.title`)}</h3>
               <p className="text-[#6F8096]">{t(`home.how.${s}.desc`)}</p>
@@ -200,7 +197,6 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
             >
               <h3 className="font-semibold mb-1">{t(`home.value.v${n}.t`)}</h3>
               <p className="text-[#6F8096]">{t(`home.value.v${n}.d`)}</p>
