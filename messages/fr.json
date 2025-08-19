@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "offers": "Offres",
+    "useCases": "Cas d'usage",
+    "about": "À propos",
+    "cta": "Lancez votre Lab"
+  },
+  "cta": {
+    "start": "Lancez votre Lab",
+    "seeOffers": "Voir les offres",
+    "details": "Détails",
+    "learn": "En savoir plus"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Votre chemin vers l’innovation",
+      "titleGradient": "Votre site, votre app, votre IA",
+      "titleSuffix": "— sans mise de départ",
+      "sub": "Commencez maintenant,",
+      "subAccent": "Payez mensuellement",
+      "desc": "Créez la tech autrement : un abonnement flexible, un projet livré sur-mesure.",
+      "from": "À partir de"
+    },
+    "badges": {
+      "scope": "Périmètre défini",
+      "fixed": "Tarif mensuel fixe",
+      "ownership": "Propriété du code"
+    },
+    "quickOffers": "Offres rapides",
+    "how": {
+      "title": "Comment ça marche",
+      "s1": {
+        "title": "Définir le périmètre",
+        "desc": "Nous priorisons la valeur métier et figeons le périmètre et les livrables."
+      },
+      "s2": {
+        "title": "Construire & gérer",
+        "desc": "Nous concevons, développons, hébergeons, monitorons et supportons."
+      },
+      "s3": {
+        "title": "Propriété du code",
+        "desc": "Vous gardez le code, l’infrastructure et la documentation."
+      }
+    },
+    "offersTitle": "Nos Services",
+    "value": {
+      "title": "Ce qui change pour vous",
+      "v1": {
+        "t": "Zéro coût initial",
+        "d": "Investissement lissé mensuellement, pas de frais de départ."
+      },
+      "v2": {
+        "t": "Gestion complète",
+        "d": "Pas besoin d’équipe technique interne — nous gérons tout."
+      },
+      "v3": {
+        "t": "Transparence",
+        "d": "Périmètre et délais clairs, sans variables cachées."
+      },
+      "v4": {
+        "t": "Scalable",
+        "d": "Architectures modernes, code maintenable."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": {
+        "q": "Est-ce du time & material ?",
+        "a": "Non. Nous travaillons sur périmètres définis avec un engagement minimum de 12 mois."
+      },
+      "q2": {
+        "q": "Qui possède le code ?",
+        "a": "Vous, entièrement, à la fin de l’engagement."
+      },
+      "q3": {
+        "q": "Pouvez-vous intégrer mon stack existant ?",
+        "a": "Oui — APIs, SSO, données, etc."
+      },
+      "q4": {
+        "q": "Hébergement & sécurité ?",
+        "a": "Pratiques modernes : CI/CD, monitoring, sauvegardes."
+      },
+      "q5": {
+        "q": "Que se passe-t-il à la fin ?",
+        "a": "Renouvellement, transfert, ou handover documenté."
+      }
+    }
+  },
+  "offers": {
+  "title1": "Nos",
+  "title2": "Offres",
+  "subtitle": "Trois offres. Un modèle : périmètre clair, tarif mensuel fixe, vous possédez le code.",
+  "website": { "title": "Site web", "desc": "Site vitrine rapide, SEO, performance. Nous gérons." },
+  "copilot": { "title": "Copilote IA", "desc": "Assistants métiers, automatisation, intégration de données." },
+  "custom":  { "title": "Applications sur mesure", "desc": "Applications web/mobile, backends scalables, intégrations." },
+  "starts": "à partir de",
+  "perMonth": "par mois",
+  "capabilities": {
+    "title": "Ce que nous construisons",
+    "website": {
+      "title": "Sites web",
+      "b1": "Sites e-commerce",
+      "b2": "Sites corporate",
+      "b3": "Portfolios",
+      "b4": "Landing pages"
+    },
+    "ai": {
+      "title": "Services IA",
+      "b1": "Automatisation de workflows",
+      "b2": "Chatbots & copilotes IA",
+      "b3": "Intégration IA",
+      "b4": "Prédiction & forecasting"
+    },
+    "apps": {
+      "title": "Applications",
+      "b1": "Applications B2B",
+      "b2": "Applications B2C",
+      "b3": "Apps mobiles",
+      "b4": "Apps cloud-native"
+    }
+}
+
+  },
+  "about": {
+    "kicker": "À propos",
+    "title": "Nous construisons des apps modernes, des sites web et des copilotes IA",
+    "intro": "Nous sommes une équipe de passionnés en mission : rendre l’innovation accessible, simple et utile. Chez Beway Labs, nous sommes spécialisés dans les sites web, le développement d’applications et les services d’IA.",
+    "mission": {
+      "p1": "Nous privilégions les résultats métiers avec une tech lean et fiable.",
+      "p2": "La propriété du code, la transparence et la création de valeur durable guident notre mission : offrir aux entreprises des technologies intelligentes et robustes qui accélèrent la croissance. Nous plaçons toujours l’humain au premier plan."
+    },
+    "values": {
+      "title1": "Nos",
+      "title2": "Valeurs",
+      "cards": {
+        "transparency": {
+          "title": "Transparence",
+          "desc": "Communication claire, sans mauvaises surprises."
+        },
+        "impact": {
+          "title": "Impact",
+          "desc": "Nous construisons ce qui génère des résultats concrets."
+        },
+        "responsible": {
+          "title": "Innovation responsable",
+          "desc": "Durable, scalable et pensée IA par design."
+        }
+      }
+    }
+  },
+  "useCases": {
+    "heroTitle": "Exemples de ",
+    "heroTitle2": "Cas d'usage",
+    "heroKicker": "Nous construisons des solutions qui répondent à de vrais besoins métiers",
+    "sector": {
+      "FSI": "Finance",
+      "Retail": "Retail",
+      "Logistics": "Logistique",
+      "Telco": "Télécom",
+      "Health": "Santé",
+      "Energy": "Énergie"
+    },
+    "selected": "Cas d’usage IA",
+    "cards": [
+      {
+        "title": "Copilote IA de reporting client",
+        "desc": "Insights et rapports automatisés qui économisent des heures de travail manuel."
+      },
+      {
+        "title": "Plateforme d’automatisation des factures fournisseurs",
+        "desc": "Simplifiez les achats avec un traitement intelligent des factures et des workflows d’approbation."
+      },
+      {
+        "title": "Chatbot agent interne",
+        "desc": "Assistant qui gère les demandes courantes et automatise les tâches répétitives."
+      }
+    ],
+    "examplesTitle": "Exemples de cas d’usage",
+    "examplesSubtitle": "Exemples concrets d'apps modernes, sites web et copilotes IA que nous construisons",
+    "examples": [
+      {
+        "title": "Site e-commerce",
+        "desc": "Site web permettant aux utilisateurs d’acheter des produits ou services en ligne.",
+        "img": "/images/usecases/retail.png"
+      },
+      {
+        "title": "Chatbot éducatif",
+        "desc": "Assistant IA qui gère les questions fréquentes et automatise les tâches courantes.",
+        "img": "/images/usecases/education.png"
+      },
+      {
+        "title": "Application santé",
+        "desc": "Applications pour la gestion des dossiers patients et de la facturation médicale.",
+        "img": "/images/usecases/healthcare.png"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Prêt à construire votre Lab?",
+    "subtitle": "Parlez-nous de votre projet. Remplissez le formulaire, nous reviendrons vers vous rapidement.",
+    "name": "Nom",
+    "email": "Email",
+    "company": "Entreprise",
+    "country": "Pays",
+    "offer": "Offre d’intérêt",
+    "message": "Message",
+    "submit": "Envoyer",
+    "sending": "Envoi…",
+    "ok": "Merci ! Nous reviendrons vers vous rapidement."
+  }
+}

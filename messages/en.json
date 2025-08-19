@@ -1,0 +1,220 @@
+{
+  "nav": {
+    "home": "Home",
+    "offers": "Offers",
+    "useCases": "Use Cases",
+    "about": "About",
+    "cta": "Start your Lab"
+  },
+  "cta": {
+    "start": "Start your Lab",
+    "seeOffers": "See offers",
+    "details": "Details",
+    "learn": "Learn more"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Your way to innovation",
+      "titleGradient": "Own your website, app or AI",
+      "titleSuffix": "— without upfront cost",
+      "sub": "Start now,",
+      "subAccent": "Pay monthly",
+      "desc": "Build tech smarter: get your project delivered on a subscription tailored to your needs and budget.",
+      "from": "From"
+    },
+    "badges": {
+      "scope": "Defined scope",
+      "fixed": "Fixed monthly fee",
+      "ownership": "Code ownership"
+    },
+    "quickOffers": "Quick offers",
+    "how": {
+      "title": "How it works",
+      "s1": {
+        "title": "Define the scope",
+        "desc": "We prioritize business value and lock the scope and deliverables."
+      },
+      "s2": {
+        "title": "Build & manage",
+        "desc": "We design, build, host, monitor and support."
+      },
+      "s3": {
+        "title": "Own your code",
+        "desc": "You keep the code, infrastructure and documentation."
+      }
+    },
+    "offersTitle": "What we do",
+    "value": {
+      "title": "What changes for you",
+      "v1": {
+        "t": "Zero upfront",
+        "d": "Spread investment monthly, with no initial cost."
+      },
+      "v2": {
+        "t": "End-to-end management",
+        "d": "No internal tech team required — we manage it all."
+      },
+      "v3": {
+        "t": "Transparency",
+        "d": "Clear scope and deadlines, no hidden surprises."
+      },
+      "v4": {
+        "t": "Scalable",
+        "d": "Modern architectures and maintainable code."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": {
+        "q": "Is this time & material?",
+        "a": "No. We work on defined scopes with a minimum 12-month commitment."
+      },
+      "q2": {
+        "q": "Who owns the code?",
+        "a": "You do, fully, at the end of the engagement."
+      },
+      "q3": {
+        "q": "Can you integrate my existing stack?",
+        "a": "Yes — APIs, SSO, data, etc."
+      },
+      "q4": {
+        "q": "Hosting & security?",
+        "a": "Modern practices: CI/CD, monitoring, backups."
+      },
+      "q5": {
+        "q": "What happens at the end?",
+        "a": "Renew, transfer, or documented handover."
+      }
+    }
+  },
+  "offers": {
+    "title1": "Our",
+    "title2": "Offers",
+    "subtitle": "Three offers. One model: clear scope, fixed monthly fee, and full code ownership.",
+    "website": {
+      "title": "Website",
+      "desc": "Fast showcase, SEO, performance. We manage."
+    },
+    "copilot": {
+      "title": "AI Copilot",
+      "desc": "Business assistants, automation, data integration."
+    },
+    "custom": {
+      "title": "Custom Apps",
+      "desc": "Web/mobile apps, scalable backends, integrations."
+    },
+    "starts": "from",
+    "perMonth": "per month",
+    "capabilities": {
+      "title": "What we build",
+      "website": {
+        "title": "Website",
+        "b1": "E-commerce websites",
+        "b2": "Business websites",
+        "b3": "Portfolio websites",
+        "b4": "Landing pages"
+      },
+      "ai": {
+        "title": "AI services",
+        "b1": "Workflow automation",
+        "b2": "AI chatbots & copilots",
+        "b3": "AI integration",
+        "b4": "Prediction & forecasting"
+      },
+      "apps": {
+        "title": "Applications",
+        "b1": "B2B applications",
+        "b2": "B2C applications",
+        "b3": "Mobile apps",
+        "b4": "Cloud-native apps"
+      }
+    }
+  },
+  "about": {
+    "kicker": "About us",
+    "title": "We build modern apps, websites, and AI services",
+    "intro": "We're a team of passionate tech experts on a mission to make innovation accessible, easy, and impactful. At Beway Labs, we specialize in website and application development, as well as AI services, to help businesses of all sizes turn big ideas into powerful digital solutions.",
+    "mission": {
+      "p1": "We focus on business outcomes with lean, reliable tech.",
+      "p2": "Ownership, transparency, and long-term value guide our mission: to empower companies with smart, reliable technology that drives growth and delivers real value. We believe in building with purpose, moving fast, and always putting people first."
+    },
+    "values": {
+      "title1": "Our",
+      "title2": "Values",
+      "cards": {
+        "transparency": {
+          "title": "Transparency",
+          "desc": "Clear communication, no hidden surprises."
+        },
+        "impact": {
+          "title": "Impact",
+          "desc": "We build what drives real business outcomes."
+        },
+        "responsible": {
+          "title": "Responsible Innovation",
+          "desc": "Sustainable, scalable and AI-native by design."
+        }
+      }
+    }
+  },
+  "useCases": {
+    "heroTitle": "Selected ",
+    "heroTitle2": "Use Cases",
+    "heroKicker": "We build solutions that address real business needs",
+    "sector": {
+      "FSI": "Finance",
+      "Retail": "Retail",
+      "Logistics": "Logistics",
+      "Telco": "Telecom",
+      "Health": "Health",
+      "Energy": "Energy"
+    },
+    "selected": "Selected AI Use Cases",
+    "cards": [
+      {
+        "title": "AI Client Reporting Copilot",
+        "desc": "Automated insights and reports that save hours of manual work."
+      },
+      {
+        "title": "Supplier Invoice Automation Platform",
+        "desc": "Streamline procurement with smart invoice processing and approval workflows."
+      },
+      {
+        "title": "Internal Agent Chatbot",
+        "desc": "Assistant that handles common queries and automates routine tasks."
+      }
+    ],
+    "examplesTitle": "Use Case Examples",
+    "examplesSubtitle": "Real-world examples of how we create modern apps, websites, and AI copilots",
+    "examples": [
+      {
+        "title": "Retail website",
+        "desc": "Website that allows users to purchase products or services online.",
+        "img": "/images/usecases/retail.png"
+      },
+      {
+        "title": "Education chatbot",
+        "desc": "AI assistant that handles common queries and automates routine tasks.",
+        "img": "/images/usecases/education.png"
+      },
+      {
+        "title": "Healthcare app",
+        "desc": "Applications for managing patient records and medical billing.",
+        "img": "/images/usecases/healthcare.png"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ready to build your Lab?",
+    "subtitle": "Tell us about your project. Get in touch using the form, we'll get back to you as soon as possible.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "country": "Country",
+    "offer": "Offer of interest",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending…",
+    "ok": "Thanks! We’ll get back to you shortly."
+  }
+}

@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palette + dégradés */
+:root{
+  --blue-1:#00B4FF;
+  --blue-2:#0047AB;
+  --text:#0A142F;
+  --muted:#8A93A2;
+  --bg:#F6FAFF;
+  --card:#FFFFFF;
+}
+
+/* Background clair */
+html,body{ height:100%; }
+body{
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(0,180,255,.18), transparent 60%),
+    radial-gradient(1000px 500px at 90% 0%, rgba(0,71,171,.12), transparent 60%),
+    var(--bg);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* Containers & titres */
+.container{ @apply mx-auto max-w-6xl px-4; }
+.section{ @apply py-20 md:py-28; }
+.h1{ @apply text-4xl md:text-6xl font-extrabold leading-tight tracking-tight; }
+.h2{ @apply text-3xl md:text-4xl font-extrabold; }
+
+/* Accent bleu en dégradé sur certains mots  */
+.accent{
+  background: linear-gradient(90deg,var(--blue-1),var(--blue-2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Boutons  */
+.btn{ @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-semibold transition; }
+.btn-primary{
+  background: linear-gradient(90deg,var(--blue-1),var(--blue-2));
+  color:white;
+  box-shadow:0 10px 25px rgba(0,123,255,.25);
+}
+.btn-primary:hover{ transform:translateY(-1px); box-shadow:0 14px 32px rgba(0,123,255,.30); }
+.btn-secondary{ @apply border border-[color:var(--blue-1)] text-[color:var(--blue-2)]; }
+
+/* Cartes blanches */
+.card{
+  background: var(--card);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(28,39,82,.08);
+  border: 1px solid rgba(10,20,47,.06);
+  padding: 28px;
+}
+
+/* Inputs */
+input,textarea,select{
+  @apply w-full rounded-xl border px-3.5 py-3 outline-none;
+  background:#fff; border-color:rgba(10,20,47,.12);
+}
+input:focus,textarea:focus,select:focus{
+  border-color: var(--blue-1);
+  box-shadow: 0 0 0 4px rgba(0,180,255,.12);
+}
+
+/* Header “clair + glass + ombre légère” */
+.header-glass {
+  background: #F6FAFF; /* bleu très clair */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgb(252, 253, 255);
+  box-shadow: 0 4px 18px rgba(10, 20, 47, 0.06);
+}
+.offers-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.offer-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+.offer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.offer-price {
+  color: #007BFF;
+  font-size: 1.2rem;
+}
+/* Ombres plus premium */
+.soft-shadow { box-shadow: 0 12px 30px rgba(28,39,82,.12); }
+.soft-shadow-lg { box-shadow: 0 20px 50px rgba(28,39,82,.18); }
+
+/* Badges de confiance */
+.pill { 
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.5rem .8rem; border-radius:999px;
+  background:#fff; border:1px solid rgba(10,20,47,.08); color:#0A142F; font-weight:600;
+}
+.pill i { width:.6rem; height:.6rem; border-radius:999px; background:linear-gradient(90deg,var(--blue-1),var(--blue-2)); }
+
+/* Bouton secondaire premium (outline dégradé) */
+.btn-outline {
+  position:relative; color:var(--blue-2); background:#fff;
+  border:1px solid rgba(0,180,255,.5);
+}
+.btn-outline:after{
+  content:''; position:absolute; inset:-1px; border-radius:1rem;
+  background:linear-gradient(90deg,var(--blue-1),transparent); opacity:.25; pointer-events:none;
+}
+
+/* Icône ronde sur cartes */
+.icon-round{
+  width:44px; height:44px; border-radius:12px;
+  background:linear-gradient(90deg,var(--blue-1),var(--blue-2));
+  display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800;
+}
+
+/* Accordion FAQ (details/summary natif) */
+details{ background:#fff; border:1px solid rgba(10,20,47,.08); border-radius:18px; padding:1rem 1.25rem; }
+details+details{ margin-top:1rem; }
+summary{ cursor:pointer; font-weight:700; outline:none; }
+summary::-webkit-details-marker{ display:none; }
+/* --- OFFERS CARDS --- */
+.card-offer {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border: 1px solid rgba(10,20,47,.06);
+}
+.card-offer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(28,39,82,.14);
+  border-color: rgba(0,180,255,.35);
+}
+.card-offer-header {
+  height: 66px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 800; letter-spacing: .2px;
+  margin: -12px -12px 16px; /* déborde un peu le padding interne */
+}
+
+/* variantes de dégradés par offre */
+.grad-globe { background: linear-gradient(135deg,#5ed0ff,#0070f3); }
+.grad-chip  { background: linear-gradient(135deg,#7ef1d1,#00b894); }
+.grad-cube  { background: linear-gradient(135deg,#a88bff,#5e60ce); }
+
+.price-tag {
+  font-weight: 900; font-size: 1.15rem;
+}
+.price-tag small { color: var(--muted); font-weight: 600; }
+/* Fond léger pour la section Héro des Offres */
+.section-offers-hero {
+  background:
+    radial-gradient(900px 400px at 10% -10%, rgba(0,180,255,.14), transparent 60%),
+    radial-gradient(900px 400px at 85% 0%, rgba(0,71,171,.12), transparent 60%);
+}
+
+/* Cards d'offres — header visuel premium */
+.offer-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offer-pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 64px; height: 40px; border-radius: 999px; color: #fff;
+  background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
+  box-shadow: 0 8px 20px rgba(0,123,255,.25);
+}
+
+/* Hover et bordure des cards d'offres (si pas déjà défini) */
+.card-offer { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; border:1px solid rgba(10,20,47,.06); }
+.card-offer:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(28,39,82,.14); border-color: rgba(0,180,255,.35); }
+/* Wrap global (largeur et gouttières identiques partout) */
+:root { --wrap: 1200px; } /* ajuste à 1120 / 1280 si tu veux */
+
+.wrap { 
+  max-width: var(--wrap);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;   /* 16px */
+  padding-right: 1rem;
+}
+@media (min-width: 768px){
+  .wrap { padding-left: 1.5rem; padding-right: 1.5rem; } /* 24px */
+}
+
+/* Rythme vertical standardisé */
+.section     { padding-top: 88px; padding-bottom: 88px; }
+.section-sm  { padding-top: 56px; padding-bottom: 56px; }
+.section-lg  { padding-top: 120px; padding-bottom: 120px; }
+
+/* Pile verticale (gap uniforme) */
+.stack > * + * { margin-top: 12px; }
+.stack-md > * + * { margin-top: 16px; }
+.stack-lg > * + * { margin-top: 24px; }
+
+/* Boutons : même hauteur & rayons */
+.btn { border-radius: 12px; height: 48px; }
+/* Header en verre propre */
+.header-glass {
+  backdrop-filter: saturate(140%) blur(10px);
+  background: rgba(255,255,255,.7);
+  border-bottom: 1px solid rgba(12,27,77,.06);
+}
+
+/* Hero : fond + alignement parfait */
+.hero {
+  background:
+    radial-gradient(1000px 520px at 10% -10%, rgba(0,180,255,.14), transparent 60%),
+    radial-gradient(1000px 520px at 90% 0%, rgba(0,71,171,.12), transparent 60%);
+}
+.hero-grid { align-items: center; } /* centre verticalement les 2 colonnes */
+.hero h1 { line-height: 1.04; max-width: 16ch; } /* impact + largeur contrôlée */
+
+/* Section rhythm uniforme */
+.section     { padding-top: 88px;  padding-bottom: 88px; }
+.section-sm  { padding-top: 56px;  padding-bottom: 56px; }
+
+/* Rangée de logos pro */
+.logos-row img { opacity:.65; filter: grayscale(1); transition: opacity .15s ease; }
+.logos-row img:hover { opacity: .9; filter: grayscale(0); }
+
+/* Cards : hauteur visuelle homogène + hover léger */
+.card.equal { display:flex; flex-direction:column; }
+.card.equal .card-foot { margin-top:auto; }
+.card.soft-shadow { box-shadow: 0 14px 36px rgba(28,39,82,.12); }
+.card:hover.soft-shadow { box-shadow: 0 18px 48px rgba(28,39,82,.16); transform: translateY(-2px); transition: all .2s ease; }
+/* Wrap global (largeur et gouttières identiques partout) */
+:root { --wrap: 1200px; } /* ajuste à 1120 / 1280 si tu veux */
+
+.wrap { 
+  max-width: var(--wrap);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;   /* 16px */
+  padding-right: 1rem;
+}
+@media (min-width: 768px){
+  .wrap { padding-left: 1.5rem; padding-right: 1.5rem; } /* 24px */
+}
+
+/* Rythme vertical standardisé */
+.section     { padding-top: 88px; padding-bottom: 88px; }
+.section-sm  { padding-top: 56px; padding-bottom: 56px; }
+.section-lg  { padding-top: 120px; padding-bottom: 120px; }
+
+/* Pile verticale (gap uniforme) */
+.stack > * + * { margin-top: 12px; }
+.stack-md > * + * { margin-top: 16px; }
+.stack-lg > * + * { margin-top: 24px; }
+
+/* Boutons : même hauteur & rayons */
+.btn { border-radius: 12px; height: 48px; }
+
+/* Brand gradient text */
+.gradient-beway{
+  background: linear-gradient(90deg, #1BC0FF 0%, #0A8DFF 45%, #0057FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
