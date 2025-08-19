@@ -21,99 +21,96 @@ export default function HomePage() {
   return (
     <main className="relative pt-18 text-[#0E1B2C]">
       {/* HERO */}
-      <section
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#00B4FF] via-[#0A8DFF] to-[#0047AB] text-white px-4 overflow-hidden"
-        id="home"
+<section
+  className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#00B4FF] via-[#0A8DFF] to-[#0047AB] text-white px-4 pt-24 pb-16 sm:pt-32 overflow-hidden"
+  id="home"
+>
+  {/* IMAGE GAUCHE - desktop only */}
+  <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    animate={{ opacity: 0.3, x: 0 }}
+    transition={{ duration: 1 }}
+    className="absolute inset-0 z-10 hidden sm:block"
+  >
+    <Image
+      src="/face.png"
+      alt="Background face"
+      fill
+      className="object-cover object-left"
+      style={{
+        transform: 'translateX(-40%)',
+        maskImage: 'linear-gradient(to right, black 55%, transparent 95%)',
+        WebkitMaskImage: 'linear-gradient(to right, black 55%, transparent 95%)',
+      }}
+    />
+  </motion.div>
+
+  {/* IMAGE DROITE - desktop only */}
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    animate={{ opacity: 0.3, x: 0 }}
+    transition={{ duration: 1 }}
+    className="absolute inset-0 z-10 hidden sm:block"
+  >
+    <Image
+      src="/robot.png"
+      alt="Robot face"
+      fill
+      className="object-cover object-right"
+      style={{
+        transform: 'translateX(40%)',
+        maskImage: 'linear-gradient(to left, black 55%, transparent 95%)',
+        WebkitMaskImage: 'linear-gradient(to left, black 55%, transparent 95%)',
+      }}
+    />
+  </motion.div>
+
+  {/* TEXTE HERO */}
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={{
+      hidden: { opacity: 0, y: 40 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { delay: 0.3, duration: 0.6, ease: 'easeOut' },
+      },
+    }}
+    className="relative z-20 text-center max-w-xl space-y-6 sm:space-y-8"
+  >
+    <p className="tracking-widest text-xs sm:text-sm font-semibold text-white/70 uppercase">
+      {t('home.hero.kicker')}
+    </p>
+
+    <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight sm:leading-tight">
+      <span>{t('home.hero.titleGradient')}</span>
+      <br />
+      <span className="text-[#A4D8FF]">{t('home.hero.titleSuffix')}</span>
+    </h1>
+
+    <h2 className="text-xl sm:text-3xl font-bold text-[#A4D8FF]">
+      {t('home.hero.sub')} <span className="text-white">{t('home.hero.subAccent')}</span>
+    </h2>
+
+    <p className="text-sm sm:text-lg text-white/80">{t('home.hero.desc')}</p>
+
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-3 pt-2">
+      <Link
+        href="/contact"
+        className="w-full sm:w-auto px-6 py-3 text-base sm:text-lg font-bold rounded-xl bg-gradient-to-r from-[#00B4FF] to-[#0047AB] text-white shadow-lg hover:opacity-90 transition"
       >
-        {/* IMAGE GAUCHE */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 z-10"
-        >
-          <Image
-            src="/face.png"
-            alt="Background face"
-            fill
-            className="object-cover object-left"
-            style={{
-              transform: 'translateX(-60%)',
-              maskImage: 'linear-gradient(to right, black 55%, transparent 95%)',
-              WebkitMaskImage: 'linear-gradient(to right, black 55%, transparent 95%)',
-            }}
-          />
-        </motion.div>
-
-        {/* IMAGE DROITE */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 z-0"
-        >
-          <Image
-            src="/robot.png"
-            alt="Robot face"
-            fill
-            className="object-cover object-right"
-            style={{
-              transform: 'translateX(65%)',
-              maskImage: 'linear-gradient(to left, black 55%, transparent 95%)',
-              WebkitMaskImage: 'linear-gradient(to left, black 55%, transparent 95%)',
-            }}
-          />
-        </motion.div>
-
-        {/* TEXTE HERO */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="relative z-10 wrap max-w-5xl text-center space-y-8"
-        >
-          <p className="tracking-[0.25em] text-sm font-semibold text-white/70 uppercase">
-            {t('home.hero.kicker')}
-          </p>
-
-          <h1 className="text-5xl sm:text-6xl md:text-7xl leading-tight font-extrabold">
-            <span>{t('home.hero.titleGradient')}</span>
-            <br />
-            <span className="text-[#A4D8FF]">{t('home.hero.titleSuffix')}</span>
-          </h1>
-
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#A4D8FF]">
-            {t('home.hero.sub')} <span className="text-white">{t('home.hero.subAccent')}</span>
-          </h2>
-
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
-            {t('home.hero.desc')}
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {['scope', 'fixed', 'ownership'].map((k) => (
-              <span key={k} className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-sm font-medium bg-white/90 text-[#0E1B2C] shadow">
-                {t(`home.badges.${k}`)}
-              </span>
-            ))}
-          </div>
-
-          <div className="flex justify-center gap-4 mt-6 flex-wrap">
-            <Link
-              href="/contact"
-              className="px-7 py-3 text-lg font-bold rounded-xl bg-gradient-to-r from-[#00B4FF] to-[#0047AB] text-white shadow-lg hover:opacity-90 transition"
-            >
-              {t('cta.start')} →
-            </Link>
-            <Link
-              href="#offers"
-              className="px-7 py-3 text-lg font-bold rounded-xl border border-white text-white hover:bg-white hover:text-[#0047AB] transition"
-            >
-              {t('cta.seeOffers')}
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+        {t('cta.start')} →
+      </Link>
+      <Link
+  href="#offers"
+  className="px-7 py-3 text-lg font-bold rounded-xl border border-white text-white transition duration-300 hover:bg-white hover:text-[#0047AB] hover:shadow-lg"
+>
+  {t('cta.seeOffers')}
+</Link>
+    </div>
+  </motion.div>
+</section>
 
       {/* OFFRES */}
       <section className="py-24 bg-[#F6FAFF]" id="offers">
@@ -224,12 +221,12 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* WhatsApp Button - visible only on mobile */}
+{/* WhatsApp Button - only on mobile */}
 <a
-  href="https://wa.me/33612345678" // ← à remplacer par ton numéro réel sans le +
+  href="https://wa.me/33612345678" // ← remplace avec TON numéro sans +, ex: 33612345678
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed bottom-5 right-5 z-50 block sm:hidden bg-green-500 p-4 rounded-full shadow-xl hover:scale-105 transition-transform"
+  className="fixed bottom-5 right-5 z-50 block sm:hidden bg-green-500 p-4 rounded-full shadow-lg hover:scale-105 transition-transform"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -37,7 +37,6 @@ export default function Header() {
   const headerBg = isTransparent
     ? 'bg-transparent'
     : 'bg-white shadow-[0_2px_12px_-4px_rgba(0,0,0,0.06)]';
-
   const textColor = isTransparent ? 'text-white' : 'text-[#0E1B2C]';
 
   return (
@@ -60,8 +59,8 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop nav */}
-        <nav className={`hidden md:flex items-center gap-6 text-base font-semibold ${textColor}`}>
+        {/* Desktop Nav */}
+        <nav className={`hidden md:flex items-center gap-6 text-[15px] font-semibold ${textColor}`}>
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -81,7 +80,7 @@ export default function Header() {
           {/* CTA */}
           <Link
             href="/contact"
-            className="inline-block rounded-full bg-gradient-to-r from-[#00B4FF] to-[#0047AB] px-6 py-2.5 text-base font-semibold text-white shadow-md hover:opacity-90 transition"
+            className="inline-block rounded-full bg-gradient-to-r from-[#00B4FF] to-[#0047AB] px-6 py-2 text-sm font-semibold text-white shadow-md hover:opacity-90 transition"
           >
             {t('nav.cta')}
           </Link>
@@ -89,7 +88,7 @@ export default function Header() {
           {/* Lang Switch */}
           <button
             onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-            className={`ml-2 px-3 py-1 rounded-full bg-white/20 hover:bg-white/30 text-sm font-medium ${
+            className={`ml-2 px-3 py-1 rounded-full bg-white/20 hover:bg-white/30 text-xs font-medium ${
               isTransparent ? 'text-white' : 'text-[#0E1B2C]'
             }`}
           >
@@ -97,35 +96,47 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Mobile menu button */}
-        <button
-          className={`md:hidden inline-flex items-center justify-center rounded-xl px-3 py-2 border border-black/10 shadow-sm ${
-            isTransparent ? 'bg-white/20' : 'bg-white/70'
-          }`}
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Open menu"
-        >
-          <span className="relative block w-5 h-4">
-            <span
-              className={`absolute left-0 right-0 h-0.5 transition ${
-                menuOpen ? 'top-1/2 rotate-45' : 'top-0'
-              } ${isTransparent ? 'bg-white/80' : 'bg-black/80'}`}
-            />
-            <span
-              className={`absolute left-0 right-0 h-0.5 transition ${
-                menuOpen ? 'opacity-0' : 'top-1/2 -translate-y-1/2'
-              } ${isTransparent ? 'bg-white/80' : 'bg-black/80'}`}
-            />
-            <span
-              className={`absolute left-0 right-0 h-0.5 transition ${
-                menuOpen ? 'top-1/2 -rotate-45' : 'bottom-0'
-              } ${isTransparent ? 'bg-white/80' : 'bg-black/80'}`}
-            />
-          </span>
-        </button>
+        {/* Mobile Right Section (Lang + Burger) */}
+<div className="md:hidden flex items-center gap-2 ml-auto">
+  <button
+    onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+    className={`px-3 py-1.5 rounded-full bg-white/80 border border-black/10 text-xs font-semibold ${
+      isTransparent ? 'text-white' : 'text-[#0E1B2C]'
+    }`}
+  >
+    {lang.toUpperCase()}
+  </button>
+
+  <button
+    className={`inline-flex items-center justify-center rounded-xl px-3 py-2 border border-black/10 shadow-sm ${
+      isTransparent ? 'bg-white/20' : 'bg-white/70'
+    }`}
+    onClick={() => setMenuOpen((v) => !v)}
+    aria-label="Open menu"
+  >
+    <span className="relative block w-5 h-4">
+      <span
+        className={`absolute left-0 right-0 h-0.5 transition ${
+          menuOpen ? 'top-1/2 rotate-45' : 'top-0'
+        } ${isTransparent ? 'bg-white/80' : 'bg-black/80'}`}
+      />
+      <span
+        className={`absolute left-0 right-0 h-0.5 transition ${
+          menuOpen ? 'opacity-0' : 'top-1/2 -translate-y-1/2'
+        } ${isTransparent ? 'bg-white/80' : 'bg-black/80'}`}
+      />
+      <span
+        className={`absolute left-0 right-0 h-0.5 transition ${
+          menuOpen ? 'top-1/2 -rotate-45' : 'bottom-0'
+        } ${isTransparent ? 'bg-white/80' : 'bg-black/80'}`}
+      />
+    </span>
+  </button>
+</div>
+
       </div>
 
-      {/* Mobile nav */}
+      {/* Mobile Nav */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -136,42 +147,29 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden border-t border-black/5 bg-white/95 backdrop-blur"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-4 py-6 space-y-5 text-base">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block py-2 px-4 rounded-lg text-[16px] font-medium text-[#0E1B2C] transition duration-200 hover:text-white hover:bg-gradient-to-r hover:from-[#00B4FF] hover:to-[#0047AB]"
+                  className="block py-2 px-4 rounded-lg font-medium text-[#0E1B2C] transition duration-200 hover:text-white hover:bg-gradient-to-r hover:from-[#00B4FF] hover:to-[#0047AB]"
                 >
                   {item.label}
                 </Link>
               ))}
 
-              <div className="flex items-center gap-3 pt-2">
+              <div className="pt-4">
                 <Link
-  href="/contact"
-  className="w-full text-center px-5 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-[#00B4FF] to-[#0047AB] shadow-md hover:opacity-90 transition text-base"
->
-  {t('nav.cta')}
-</Link>
-                <button
-                  onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-                  className="badge text-base"
+                  href="/contact"
+                  className="block w-full text-center px-5 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[#00B4FF] to-[#0047AB] shadow-md hover:opacity-90 transition text-base"
                 >
-                  {lang.toUpperCase()}
-                </button>
+                  {t('nav.cta')}
+                </Link>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Custom gradient class */}
-      <style jsx>{`
-        .bg-beway-gradient {
-          background: linear-gradient(90deg, #00B4FF 0%, #0047AB 100%);
-        }
-      `}</style>
     </motion.header>
   );
 }
