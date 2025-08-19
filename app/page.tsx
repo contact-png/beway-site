@@ -223,6 +223,26 @@ export default function HomePage() {
           <Link href="/contact" className="btn btn-primary">{t('cta.start')} →</Link>
         </div>
       </section>
+
+{/* WhatsApp Button - visible only on mobile */}
+<a
+  href="https://wa.me/33612345678" // ← remplace par ton vrai numéro WhatsApp
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-5 right-5 z-50 block sm:hidden bg-green-500 p-3 rounded-full shadow-lg"
+>
+  <svg
+    fill="white"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M20.52 3.48A11.83 11.83 0 0012 0a11.83 11.83 0 00-8.52 3.48A11.83 11.83 0 000 12c0 2.1.54 4.13 1.57 5.94L0 24l6.19-1.63A11.83 11.83 0 0012 24a11.83 11.83 0 008.52-3.48A11.83 11.83 0 0024 12a11.83 11.83 0 00-3.48-8.52zM12 21.46a9.49 9.49 0 01-4.87-1.31l-.35-.2-3.68.97.98-3.58-.23-.37A9.52 9.52 0 1121.46 12 9.52 9.52 0 0112 21.46zm5.27-7.54l-1.46-.71a.99.99 0 00-1.05.07l-.92.69a8.19 8.19 0 01-3.74-3.74l.69-.92a1 1 0 00.07-1.05l-.71-1.46a1 1 0 00-1.19-.52c-1.01.34-2.13 1.3-2.13 3.13 0 3.3 3.04 6.34 6.34 6.34 1.83 0 2.79-1.12 3.13-2.13a1 1 0 00-.52-1.19z" />
+  </svg>
+</a>
+
+
     </main>
   );
 }
