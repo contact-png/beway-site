@@ -67,12 +67,11 @@ export default function HomePage() {
 
         {/* TEXTE HERO */}
         <motion.div
-  custom={0}
-  initial="hidden"
-  animate="visible"
-  variants={fadeUp}
-  className="..."
->
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="relative z-10 wrap max-w-5xl text-center space-y-8"
+        >
           <p className="tracking-[0.25em] text-sm font-semibold text-white/70 uppercase">
             {t('home.hero.kicker')}
           </p>
