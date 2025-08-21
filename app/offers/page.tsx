@@ -20,24 +20,23 @@ export default function OffersPage() {
       price: '49€',
     },
     {
-      key: 'custom',
-      Icon: Laptop2,
-      title: t('offers.custom.title'),
-      desc: t('offers.custom.desc'),
-      price: '999€',
-    },
-    {
       key: 'copilot',
       Icon: Smartphone,
       title: t('offers.copilot.title'),
       desc: t('offers.copilot.desc'),
       price: '249€',
     },
+    {
+      key: 'custom',
+      Icon: Laptop2,
+      title: t('offers.custom.title'),
+      desc: t('offers.custom.desc'),
+      price: '999€',
+    },
   ];
 
   const capabilities = [
     {
-      title: t('offers.capabilities.website.title'),
       bullets: [
         t('offers.capabilities.website.b1'),
         t('offers.capabilities.website.b2'),
@@ -46,7 +45,6 @@ export default function OffersPage() {
       ],
     },
     {
-      title: t('offers.capabilities.ai.title'),
       bullets: [
         t('offers.capabilities.ai.b1'),
         t('offers.capabilities.ai.b2'),
@@ -55,7 +53,6 @@ export default function OffersPage() {
       ],
     },
     {
-      title: t('offers.capabilities.apps.title'),
       bullets: [
         t('offers.capabilities.apps.b1'),
         t('offers.capabilities.apps.b2'),
@@ -68,7 +65,7 @@ export default function OffersPage() {
   return (
     <main
       key={locale}
-      className="relative bg-gradient-to-br from-[#F6FAFF] via-white to-[#F0F4FF] text-[#0E1B2C] pt-24 pb-2 px-4 md:px-8"
+      className="relative bg-gradient-to-br from-[#F6FAFF] via-white to-[#F0F4FF] text-[#0E1B2C] pt-24 pb-12 px-4 md:px-8"
     >
       {/* HERO */}
       <section className="pt-8 md:pt-10 pb-12 md:pb-16">
@@ -85,64 +82,51 @@ export default function OffersPage() {
         </Container>
       </section>
 
-      {/* OUR OFFERS */}
-      <section className="pb-10 md:pb-14">
+      {/* MERGED OFFERS + CAPABILITIES */}
+      <section className="py-16 md:py-20">
         <Container>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {plans.map(({ key, Icon, title, desc, price }, index) => (
               <motion.div
                 key={key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4, delay: index * 0.15 }}
                 viewport={{ once: true }}
-                className="rounded-3xl bg-white/95 p-8 text-center ring-1 ring-black/5 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+                className="relative rounded-3xl bg-white/95 p-8 text-center ring-1 ring-black/5 shadow-lg"
               >
+                {/* Badge for most popular plan */}
+                {key === 'copilot' && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="rounded-full bg-gradient-to-r from-[#1BC0FF] to-[#0057FF] text-white text-xs font-semibold px-3 py-1 shadow">
+                      {t('offers.popular')}
+                    </span>
+                  </div>
+                )}
+
+                {/* Icon */}
                 <div className="mx-auto mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1BC0FF] via-[#0A8DFF] to-[#0057FF] shadow-[0_12px_30px_rgba(10,141,255,.25)]">
                   <Icon className="h-7 w-7 text-white" />
                 </div>
 
+                {/* Title & Desc */}
                 <h3 className="text-2xl font-extrabold mb-2">{title}</h3>
                 <p className="text-[#6F8096] leading-relaxed mb-4">{desc}</p>
 
-                <div className="mt-6">
-                    <span className="text-3xl font-extrabold bg-gradient-to-r from-[#0A8DFF] to-[#00B4FF] bg-clip-text text-transparent">
+                {/* Price */}
+                <div className="mt-4 flex items-baseline justify-center">
+                  <span className="text-3xl font-extrabold bg-gradient-to-r from-[#0A8DFF] to-[#00B4FF] bg-clip-text text-transparent">
                     {price}
-                    <span className="text-lg font-bold">{t('offers.price')}</span>
                   </span>
-                  
+                  <span className="ml-1 text-lg font-bold text-[#6F8096]">
+                    {t('offers.price')}
+                  </span>
                 </div>
 
-                <div className="mt-6">
-                  <Link href="/contact" className="btn btn-primary w-full sm:w-auto">
-                    {t('cta.start')}
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-      {/* CAPABILITIES */}
-      <section id="what-we-built" className="py-16 md:py-20">
-        <Container>
-          <h2 className="text-center text-3xl md:text-4xl font-extrabold mb-10">
-            {t('offers.capabilities.title')}
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {capabilities.map((c) => (
-              <motion.div
-                key={c.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="card bg-white/90 p-6 rounded-2xl ring-1 ring-gray-200 shadow-md"
-              >
-                <h3 className="text-xl font-extrabold mb-4">{c.title}</h3>
-                <ul className="space-y-2">
-                  {c.bullets.map((b) => (
+                {/* Capabilities */}
+                <ul className="mt-6 space-y-2 text-left">
+                  {capabilities[index].bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2">
                       <svg
                         viewBox="0 0 24 24"
@@ -157,14 +141,18 @@ export default function OffersPage() {
                     </li>
                   ))}
                 </ul>
+
+                {/* CTA */}
+                <div className="mt-8">
+                  <Link
+                    href="/contact"
+                    className="inline-block rounded-xl bg-gradient-to-r from-[#0A8DFF] to-[#00B4FF] px-6 py-3 font-semibold text-white shadow hover:opacity-90"
+                  >
+                    {t('cta.start')}
+                  </Link>
+                </div>
               </motion.div>
             ))}
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <Link href="/contact" className="btn btn-primary px-6">
-              {t('cta.start')} →
-            </Link>
           </div>
         </Container>
       </section>
