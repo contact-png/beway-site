@@ -10,7 +10,8 @@
     "start": "Lancez votre Lab",
     "seeOffers": "Voir les offres",
     "details": "Détails",
-    "learn": "En savoir plus"
+    "learn": "En savoir plus",
+    "finisher": "Choisi par les entreprises qui façonnent l’avenir en MEA & Europe"
   },
   "home": {
     "hero": {
@@ -20,7 +21,8 @@
       "sub": "Commencez maintenant,",
       "subAccent": "Payez mensuellement",
       "desc": "Créez la tech autrement : un abonnement flexible, un projet livré sur-mesure.",
-      "from": "À partir de"
+      "from": "À partir de",
+      "offerssubTitle": "Votre projet tech livré par abonnement. Périmètre clair, prix garanti. Sans frais caché."
     },
     "badges": {
       "scope": "Périmètre défini",
@@ -91,9 +93,9 @@
   "title1": "Nos",
   "title2": "Offres",
   "subtitle": "Trois offres. Un modèle : périmètre clair, tarif mensuel fixe, vous possédez le code.",
-  "website": { "title": "Site web", "desc": "Site vitrine rapide, SEO, performance. Nous gérons." },
-  "copilot": { "title": "Copilote IA", "desc": "Assistants métiers, automatisation, intégration de données." },
-  "custom":  { "title": "Applications sur mesure", "desc": "Applications web/mobile, backends scalables, intégrations." },
+  "website": { "title": "Site web", "desc": "Lancez une vitrine performante avec un référencement optimisé, un hébergement sécurisé et des mises à jour continues, entièrement gérés pour vous." },
+  "copilot": { "title": "Copilote IA", "desc": "Automatisez vos processus grâce à des assistants IA adaptés à votre entreprise : chatbots, reporting et intégration de données." },
+  "custom":  { "title": "Applications sur mesure", "desc": "Développez-vous avec des applications web et mobiles sur mesure – de l’MVP aux intégrations d’entreprise, pensées pour la croissance." },
   "starts": "à partir de",
   "perMonth": "par mois",
   "capabilities": {

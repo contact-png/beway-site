@@ -10,7 +10,8 @@
     "start": "Start your Lab",
     "seeOffers": "See offers",
     "details": "Details",
-    "learn": "Learn more"
+    "learn": "Learn more",
+    "finisher": "Trusted by forward-thinking teams in UAE, KSA, Qatar & Europe"
   },
   "home": {
     "hero": {
@@ -20,7 +21,8 @@
       "sub": "Start now,",
       "subAccent": "Pay monthly",
       "desc": "Build tech smarter: get your project delivered on a subscription tailored to your needs and budget.",
-      "from": "From"
+      "from": "At",
+      "offerssubTitle": "Tech delivery on subscription. Fixed scope, fixed fee. No hidden cost."
     },
     "badges": {
       "scope": "Defined scope",
@@ -28,7 +30,7 @@
       "ownership": "Code ownership"
     },
     "quickOffers": "Quick offers",
-    "how": {
+      "how": {
       "title": "How it works",
       "s1": {
         "title": "Define the scope",
@@ -93,17 +95,17 @@
     "subtitle": "Three offers. One model: clear scope, fixed monthly fee, and full code ownership.",
     "website": {
       "title": "Website",
-      "desc": "Fast showcase, SEO, performance. We manage."
+      "desc": "Launch a high-performance showcase with SEO optimization, secure hosting, and continuous updates, managed for you."
     },
     "copilot": {
       "title": "AI Copilot",
-      "desc": "Business assistants, automation, data integration."
+      "desc": "Automate workflows with AI assistants tailored to your business: chatbots, reporting, and data integration."
     },
     "custom": {
       "title": "Custom Apps",
-      "desc": "Web/mobile apps, scalable backends, integrations."
+      "desc": "Scale with custom web & mobile apps - from MVPs to enterprise integrations, designed for growth."
     },
-    "starts": "from",
+    "starts": "At",
     "perMonth": "per month",
     "capabilities": {
       "title": "What we build",
