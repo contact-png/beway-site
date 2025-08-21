@@ -6,7 +6,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { useRouter, useSearchParams, useParams } from 'next/navigation';
+import { useRouter, useSearchParams, useParams, usePathname } from 'next/navigation';
+import type { Route } from 'next';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
   BarChart3,
@@ -126,6 +127,7 @@ export default function UseCasesPage() {
 
   const router = useRouter();
   const search = useSearchParams();
+  const pathname = usePathname();
 
   const fromUrl = (search.get('sector') as Sector | null) || 'All';
   const [active, setActive] = useState<Sector>(ALL_SECTORS.includes(fromUrl) ? fromUrl : 'All');
@@ -147,7 +149,8 @@ export default function UseCasesPage() {
   const onPick = (s: Sector) => {
     setActive(s);
     const q = s === 'All' ? '' : `?sector=${encodeURIComponent(s)}`;
-    router.replace(q, { scroll: false });
+    const href = (`${pathname}${q}`) as Route; // typed routes: cast to Route
+    router.replace(href, { scroll: false });
   };
 
   const L = {
