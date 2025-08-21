@@ -11,7 +11,11 @@
     "seeOffers": "See offers",
     "details": "Details",
     "learn": "Learn more",
-    "finisher": "Trusted by forward-thinking teams in UAE, KSA, Qatar & Europe"
+    "finisher": "Trusted by forward-thinking teams in UAE, KSA, Qatar & Europe",
+    "free": "Get Started",
+    "website":"Launch my website",
+    "copilot":"Activate my AI",
+    "custom":"Build my App"
   },
   "home": {
     "hero": {
@@ -95,7 +99,12 @@
     "subtitle": "Three offers. One model: clear scope, fixed monthly fee, and full code ownership.",
     "price":"/month",
     "popular":"Popular Offer",
-    "website": {
+    "free":"Free Consultation",
+    "freeBadge":"Free Consultation",
+    "freeLine":"Let's get into the First step of your idea realization !",
+    "diffs":"No setup fees · No hidden cost ",
+    "trusted":"Trusted by teams in UAE, KSA, Qatar & Europe",
+      "website": {
       "title": "Website",
       "desc": "Launch a high-performance showcase with SEO optimization, secure hosting, continuous updates, managed for you."
     },

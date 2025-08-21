@@ -12,7 +12,6 @@ export default function OffersPage() {
   const { locale } = useParams() as { locale: string };
   const prefersReducedMotion = useReducedMotion();
 
-  // Cards + merged "what we build" bullets per plan
   const plans = [
     {
       key: 'website',
@@ -26,6 +25,7 @@ export default function OffersPage() {
         t('offers.capabilities.website.b3'),
         t('offers.capabilities.website.b4'),
       ],
+      cta: t('cta.website') || 'Lancer mon site',
       popular: false,
     },
     {
@@ -40,7 +40,8 @@ export default function OffersPage() {
         t('offers.capabilities.ai.b3'),
         t('offers.capabilities.ai.b4'),
       ],
-      popular: true, // Highlight this one
+      cta: t('cta.copilot') || 'Activer mon copilote IA',
+      popular: true,
     },
     {
       key: 'custom',
@@ -54,6 +55,7 @@ export default function OffersPage() {
         t('offers.capabilities.apps.b3'),
         t('offers.capabilities.apps.b4'),
       ],
+      cta: t('cta.custom') || 'Construire mon app',
       popular: false,
     },
   ] as const;
@@ -61,13 +63,12 @@ export default function OffersPage() {
   return (
     <main
       key={locale}
-      className="relative bg-gradient-to-br from-[#F6FAFF] via-white to-[#F0F4FF] text-[#0E1B2C] pt-24 pb-10 px-4 md:px-8"
+      className="relative bg-gradient-to-br from-[#F6FAFF] via-white to-[#F0F4FF] text-[#0E1B2C] pt-24 pb-12 px-4 md:px-8"
     >
       {/* HERO */}
-      <section className="pt-8 md:pt-10 pb-8 md:pb-12">
+      <section className="pt-8 md:pt-10 pb-6 md:pb-10">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
-            {/* Single H1 on this page */}
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
               {t('offers.title1')}{' '}
               <span className="bg-gradient-to-r from-[#1BC0FF] via-[#0A8DFF] to-[#0057FF] bg-clip-text text-transparent">
@@ -76,14 +77,41 @@ export default function OffersPage() {
             </h1>
             <p className="mt-3 text-[#6F8096]">{t('offers.subtitle')}</p>
           </div>
+
+          {/* FREE CONSULTATION STRIP */}
+          <motion.div
+            initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
+            whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="mt-6 md:mt-8"
+          >
+            <div className="mx-auto max-w-4xl rounded-2xl border border-sky-100 bg-white/80 backdrop-blur px-4 py-4 md:px-6 md:py-5 shadow-sm flex flex-col md:flex-row items-center gap-3 md:gap-6">
+              <span className="inline-flex items-center rounded-full bg-gradient-to-r from-[#1BC0FF] to-[#0A8DFF] px-3 py-1 text-xs font-semibold text-white shadow">
+                {t('offers.freeBadge') || 'Consultation gratuite'}
+              </span>
+              <p className="text-sm md:text-base text-center md:text-left text-[#0E1B2C]">
+                {t('offers.freeLine') ||
+                  'Démarrez par un call de 20 min : cadrage, faisabilité et recommandations.'}
+              </p>
+              <div className="md:ml-auto">
+                <Link
+                  href="/contact?type=free-consultation"
+                  className="h-11 inline-flex items-center justify-center rounded-xl bg-[#0A8DFF] px-5 text-white font-semibold shadow hover:brightness-110 transition"
+                >
+                  {t('cta.free') || 'Réserver — 0€'}
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </Container>
       </section>
 
-      {/* OUR OFFERS (merged with “what we build” bullets) */}
+      {/* OUR OFFERS */}
       <section className="pb-2 md:pb-6">
         <Container>
           <div className="grid gap-6 xl:gap-8 md:grid-cols-3">
-            {plans.map(({ key, Icon, title, desc, price, bullets, popular }, index) => (
+            {plans.map(({ key, Icon, title, desc, price, bullets, popular, cta }, index) => (
               <motion.article
                 key={key}
                 initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 30 }}
@@ -97,14 +125,12 @@ export default function OffersPage() {
                 ].join(' ')}
                 aria-labelledby={`${key}-title`}
               >
-                {/* Popular badge */}
                 {popular && (
                   <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-xs sm:text-[13px] font-semibold bg-gradient-to-r from-[#1BC0FF] to-[#0A8DFF] text-white shadow">
-                    {t('offers.popular') || 'Popular Offer'}
+                    {t('offers.popular') || 'Offre populaire'}
                   </div>
                 )}
 
-                {/* Icon with soft glow */}
                 <div className="mx-auto mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1BC0FF] via-[#0A8DFF] to-[#0057FF] shadow-[0_12px_30px_rgba(10,141,255,.25)] relative before:absolute before:inset-0 before:-z-10 before:rounded-3xl before:blur-2xl before:bg-sky-400/10">
                   <Icon className="h-7 w-7 text-white" aria-hidden />
                 </div>
@@ -121,19 +147,16 @@ export default function OffersPage() {
                     {price}
                   </span>
                   <span className="text-[#6F8096] font-semibold">
-                    {t('offers.price') /* e.g., "/month" */}
+                    {locale === 'fr' ? '/mois' : t('offers.price') || '/month'}
                   </span>
                 </div>
 
-                {/* Bullets (merged “what we build”) */}
+                {/* Bullets */}
                 <ul className="mt-6 space-y-2">
                   {bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2">
                       <svg viewBox="0 0 24 24" className="w-5 h-5 mt-0.5 text-[#0A8DFF]" aria-hidden>
-                        <path
-                          fill="currentColor"
-                          d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
-                        />
+                        <path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
                       </svg>
                       <span className="text-[#0E1B2C]">{b}</span>
                     </li>
@@ -141,25 +164,34 @@ export default function OffersPage() {
                 </ul>
 
                 {/* CTA */}
-                <div className="mt-7 flex justify-center">
+                <div className="mt-7 flex flex-col items-center gap-2">
                   <Link
-                    href="/contact"
-                    className={[
-                      'btn btn-primary h-11 px-5 text-sm w-full sm:w-auto',
-                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60',
-                    ].join(' ')}
-                    aria-label={`${t('cta.start')} — ${title}`}
+                    href={`/contact?plan=${key}`}
+                    className="h-11 inline-flex items-center justify-center rounded-xl bg-[#0A8DFF] px-5 text-white font-semibold shadow hover:brightness-110 transition w-full sm:w-auto"
+                    aria-label={`${t('cta.start') || 'Commencer'} — ${title}`}
                   >
-                    {t('cta.start')}
+                    {cta}
+                  </Link>
+
+                  {/* lien secondaire (remplace le bouton) */}
+                  <Link
+                    href={`/contact?plan=${key}&type=free-consultation`}
+                    className="text-[#0A8DFF] font-medium text-sm hover:underline underline-offset-4"
+                    aria-label={`Consultation gratuite — ${title}`}
+                  >
+                    {t('offers.free') || 'Consultation gratuite'}
                   </Link>
                 </div>
               </motion.article>
             ))}
           </div>
 
-          {/* Page CTA */}
-          <div className="mt-12 flex justify-center">
-            
+          {/* Differentiators */}
+          <div className="mt-10 text-center text-sm text-[#6F8096]">
+            <p>
+              {t('offers.diffs') ||
+                'Aucun frais de mise en place · Abonnement mensuel fixe · Résiliable à tout moment · Propriété complète du code'}
+            </p>
           </div>
         </Container>
       </section>

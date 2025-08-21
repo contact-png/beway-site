@@ -11,7 +11,11 @@
     "seeOffers": "Voir les offres",
     "details": "Détails",
     "learn": "En savoir plus",
-    "finisher": "Choisi par les entreprises qui façonnent l’avenir en MEA & Europe"
+    "finisher": "Choisi par les entreprises qui façonnent l’avenir en MEA & Europe",
+    "free": "Commencez Ici",
+    "website":"Lancer mon site",
+    "copilot":"Activer mon copilote IA",
+    "custom":"Construire mon app"
   },
   "home": {
     "hero": {
@@ -93,13 +97,18 @@
   "title1": "Nos",
   "title2": "Offres",
   "popular":"Offre populaire",
-  "subtitle": "Trois offres. Un modèle : périmètre clair, tarif mensuel fixe, vous possédez le code.",
+  "subtitle": "Trois offres. Un modèle : périmètre clair, abonnement mensuel fixe, vous possédez le code.",
   "price":"/mois",
   "website": { "title": "Site web", "desc": "Lancez une vitrine performante avec un référencement optimisé, un hébergement sécurisé et des mises à jour continues, entièrement gérés pour vous." },
   "copilot": { "title": "Copilote IA", "desc": "Automatisez chacun de vos processus grâce à des assistants IA personnalisés et adaptés à votre entreprise : chatbots, reporting et intégration de données." },
   "custom":  { "title": "Applications sur mesure", "desc": "Développez-vous avec des applications web et mobiles sur mesure – de l’MVP aux intégrations d’entreprise, pensées pour la croissance." },
   "starts": "",
   "perMonth": "par mois",
+  "free":"Consultation gratuite",
+  "freeBadge":"Consultation gratuite",
+  "freeLine":"Entrons dans la première étape de la réalisation de votre idée !",
+  "diffs":"Aucun coût caché · Pas de frais de mise en place ",
+  "trusted":"Choisi par les entreprises qui façonnent l’avenir en MEA & Europe",
   "capabilities": {
     "title": "Ce que nous construisons",
     "website": {
