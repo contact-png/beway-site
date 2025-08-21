@@ -157,15 +157,7 @@ export default function OffersPage() {
             ))}
           </div>
 
-          {/* Page CTA */}
-          <div className="mt-12 flex justify-center">
-            <Link
-              href="/contact"
-              className="btn btn-primary h-11 px-6 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
-            >
-              {t('cta.start')} →
-            </Link>
-          </div>
+      
         </Container>
       </section>
     </main>
