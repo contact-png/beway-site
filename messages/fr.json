@@ -93,10 +93,11 @@
   "title1": "Nos",
   "title2": "Offres",
   "subtitle": "Trois offres. Un modèle : périmètre clair, tarif mensuel fixe, vous possédez le code.",
+  "price":"/mois",
   "website": { "title": "Site web", "desc": "Lancez une vitrine performante avec un référencement optimisé, un hébergement sécurisé et des mises à jour continues, entièrement gérés pour vous." },
-  "copilot": { "title": "Copilote IA", "desc": "Automatisez vos processus grâce à des assistants IA adaptés à votre entreprise : chatbots, reporting et intégration de données." },
+  "copilot": { "title": "Copilote IA", "desc": "Automatisez vos processus grâce à des assistants IA sur-mesure adaptés à votre entreprise : chatbots, reporting et intégration de données." },
   "custom":  { "title": "Applications sur mesure", "desc": "Développez-vous avec des applications web et mobiles sur mesure – de l’MVP aux intégrations d’entreprise, pensées pour la croissance." },
-  "starts": "à partir de",
+  "starts": "",
   "perMonth": "par mois",
   "capabilities": {
     "title": "Ce que nous construisons",

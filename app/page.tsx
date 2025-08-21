@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useI18n } from './i18n';
 import {
   ClipboardCheck,
@@ -22,12 +22,16 @@ const steps = [
   { key: 's3', Icon: ShieldCheck },    // Own your code
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
   }),
 };
 
@@ -90,7 +94,11 @@ export default function HomePage() {
             visible: {
               opacity: 1,
               y: 0,
-              transition: { delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+              transition: {
+                delay: 0.3,
+                duration: 0.6,
+                ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+              },
             },
           }}
           className="relative z-20 text-center max-w-xl space-y-6 sm:space-y-8"
@@ -155,7 +163,11 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.55, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.55,
+                  delay: i * 0.12,
+                  ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+                }}
                 className="group relative rounded-2xl bg-white/90 backdrop-blur-sm ring-1 ring-black/5 shadow-sm hover:shadow-xl transition-shadow"
               >
                 {/* Image */}
@@ -225,7 +237,7 @@ export default function HomePage() {
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                 className="origin-top w-full h-full bg-gradient-to-b from-[#00B4FF] to-[#0047AB] rounded"
               />
             </div>
@@ -236,7 +248,7 @@ export default function HomePage() {
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                 className="origin-left h-full w-full bg-gradient-to-r from-[#00B4FF] to-[#0047AB] rounded"
               />
             </div>
@@ -249,7 +261,11 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
-                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 0.5,
+                    delay: i * 0.08,
+                    ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+                  }}
                   className="relative bg-[#F9FBFF] p-6 md:p-7 rounded-2xl shadow-[0_8px_24px_rgba(10,20,47,0.06)] ring-1 ring-black/5 hover:-translate-y-1 hover:shadow-xl hover:ring-[#0047AB]/15 transition-all"
                   aria-labelledby={`how-step-${i + 1}`}
                 >

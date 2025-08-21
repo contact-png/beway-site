@@ -93,9 +93,10 @@
     "title1": "Our",
     "title2": "Offers",
     "subtitle": "Three offers. One model: clear scope, fixed monthly fee, and full code ownership.",
+    "price":"/month",
     "website": {
       "title": "Website",
-      "desc": "Launch a high-performance showcase with SEO optimization, secure hosting, and continuous updates, managed for you."
+      "desc": "Launch a high-performance showcase with SEO optimization, secure hosting, continuous updates, managed for you."
     },
     "copilot": {
       "title": "AI Copilot",
@@ -105,7 +106,7 @@
       "title": "Custom Apps",
       "desc": "Scale with custom web & mobile apps - from MVPs to enterprise integrations, designed for growth."
     },
-    "starts": "At",
+    "starts": "",
     "perMonth": "per month",
     "capabilities": {
       "title": "What we build",

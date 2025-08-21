@@ -105,13 +105,12 @@ export default function OffersPage() {
                 <h3 className="text-2xl font-extrabold mb-2">{title}</h3>
                 <p className="text-[#6F8096] leading-relaxed mb-4">{desc}</p>
 
-                <div className="mt-4">
-                  <span className="text-sm text-[#7B8A9F] mr-2">{t('offers.starts')}</span>
-                  <span className="text-3xl font-extrabold bg-gradient-to-r from-[#0A8DFF] to-[#00B4FF] bg-clip-text text-transparent">
+                <div className="mt-6">
+                    <span className="text-3xl font-extrabold bg-gradient-to-r from-[#0A8DFF] to-[#00B4FF] bg-clip-text text-transparent">
                     {price}
-                    <span className="text-lg font-bold">/month</span>
+                    <span className="text-lg font-bold">{t('offers.price')}</span>
                   </span>
-                  <div className="text-xs text-[#9AA8B6] mt-1">No upfront cost</div>
+                  
                 </div>
 
                 <div className="mt-6">
