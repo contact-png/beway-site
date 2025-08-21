@@ -157,7 +157,10 @@ export default function OffersPage() {
             ))}
           </div>
 
-      
+          {/* Page CTA */}
+          <div className="mt-12 flex justify-center">
+            
+          </div>
         </Container>
       </section>
     </main>
