@@ -162,10 +162,12 @@
       }
     }
   },
-  "useCases": {
-    "heroTitle": "Exemples de ",
-    "heroTitle2": "Cas d'usage",
-    "heroKicker": "Nous construisons des solutions qui répondent à de vrais besoins métiers",
+  "usecases": {
+    "title1": "Exemples de ",
+    "title2": "Cas d'usage",
+    "kicker": "Nous construisons des solutions qui répondent à de vrais besoins métiers",
+    "subtitle":"Exemples concrets d'apps modernes, sites web et copilotes IA que nous construisons",
+    "all":"Tous",
     "sector": {
       "FSI": "Finance",
       "Retail": "Retail",

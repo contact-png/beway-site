@@ -170,10 +170,12 @@
       }
     }
   },
-  "useCases": {
-    "heroTitle": "Selected ",
-    "heroTitle2": "Use Cases",
-    "heroKicker": "We build solutions that address real business needs",
+  "usecases": {
+    "title1": "Selected ",
+    "title2": "Use Cases",
+    "kicker":"WE BUILD SOLUTIONS THAT ADDRESS REAL BUSINESS NEEDS",
+    "subtitle":"Real-world examples of how we create modern apps, websites, and AI copilots",
+    "all":"All",
     "sector": {
       "FSI": "Finance",
       "Retail": "Retail",
