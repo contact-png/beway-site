@@ -27,7 +27,7 @@ const fadeUp = {
   visible: (i: number = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
+    transition: { delay: i * 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   }),
 };
 
@@ -35,7 +35,7 @@ export default function HomePage() {
   const { t } = useI18n();
 
   return (
-    <main className="relative pt-0 text-[#0E1B2C]">{/* pt-18 n'existe pas en Tailwind par défaut */}
+    <main className="relative pt-0 text-[#0E1B2C]">
       {/* HERO */}
       <section
         className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#00B4FF] via-[#0A8DFF] to-[#0047AB] text-white px-4 pt-24 pb-16 sm:pt-32 overflow-hidden"
@@ -90,7 +90,7 @@ export default function HomePage() {
             visible: {
               opacity: 1,
               y: 0,
-              transition: { delay: 0.3, duration: 0.6, ease: 'easeOut' },
+              transition: { delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] },
             },
           }}
           className="relative z-20 text-center max-w-xl space-y-6 sm:space-y-8"
@@ -155,7 +155,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.55, delay: i * 0.12, ease: 'easeOut' }}
+                transition={{ duration: 0.55, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative rounded-2xl bg-white/90 backdrop-blur-sm ring-1 ring-black/5 shadow-sm hover:shadow-xl transition-shadow"
               >
                 {/* Image */}
@@ -225,7 +225,7 @@ export default function HomePage() {
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.9, ease: 'easeOut' }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                 className="origin-top w-full h-full bg-gradient-to-b from-[#00B4FF] to-[#0047AB] rounded"
               />
             </div>
@@ -236,7 +236,7 @@ export default function HomePage() {
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.9, ease: 'easeOut' }}
+                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                 className="origin-left h-full w-full bg-gradient-to-r from-[#00B4FF] to-[#0047AB] rounded"
               />
             </div>
@@ -249,7 +249,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
-                  transition={{ duration: 0.5, delay: i * 0.08, ease: 'easeOut' }}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
                   className="relative bg-[#F9FBFF] p-6 md:p-7 rounded-2xl shadow-[0_8px_24px_rgba(10,20,47,0.06)] ring-1 ring-black/5 hover:-translate-y-1 hover:shadow-xl hover:ring-[#0047AB]/15 transition-all"
                   aria-labelledby={`how-step-${i + 1}`}
                 >
